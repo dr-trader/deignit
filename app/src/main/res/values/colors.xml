@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="almost_black">#FF15171b</color>
+    <color name="dark_gray">#FFc0c1c6</color> <!-- bottom buttons color -->
+    <color name="light_gray">#FF7d7e80</color> <!-- top bar text -->
+    <color name="top_text_dark">#FFc1c1c1</color>
+    <color name="top_text_light">#FFfafafb</color>
+
+    <color name="gradient_start">#FF35f286</color>
+    <color name="gradient_end">#FF00bbba</color>
+
     <color name="black">#FF000000</color>
 
     <color name="purple_200">#FFBB86FC</color>

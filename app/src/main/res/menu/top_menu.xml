@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mi_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/mi_search_name"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/mi_filter"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/mi_filter_name"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/mi_profile"
+        android:title="@string/mi_profile_name"
+        app:showAsAction="always"
+        app:actionLayout="@layout/profile_menu_layout"/>
+
+</menu>

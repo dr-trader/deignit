@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mi_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/mi_home_name" />
+
+    <item
+        android:id="@+id/mi_classes"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/mi_classes_name" />
+    <item
+        android:id="@+id/mi_list"
+        android:icon="@drawable/ic_list"
+        android:title="@string/mi_list_name" />
+    <item
+        android:id="@+id/mi_fav"
+        android:icon="@drawable/ic_star"
+        android:title="@string/mi_fav_name" />
+</menu>
