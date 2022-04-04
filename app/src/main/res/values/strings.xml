@@ -16,4 +16,15 @@
     <!-- Default Text -->
     <string name="hi_name_string">Hi, User!</string>
 
+    <!-- Countdown Text -->
+    <string name="countdown_title_string">Are you ready for the future?</string>
+    <string name="countdown_subtitle_days">Days</string>
+    <string name="countdown_subtitle_hours">Hours</string>
+    <string name="countdown_subtitle_minuutes">Minutes</string>
+    <string name="countdown_delimiter">:</string>
+    <string name="countdown_default_text">0</string>
+
+    <!-- Classes Section -->
+    <string name="classes_title_text">Classes</string>
+
 </resources>

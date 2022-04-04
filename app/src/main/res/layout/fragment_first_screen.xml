@@ -14,17 +14,57 @@
         android:layout_height="@dimen/countdown_height"
         android:layout_marginHorizontal="@dimen/countdown_margin_h"
         android:layout_marginVertical="@dimen/countdown_margin_v"
-        app:cardCornerRadius="@dimen/countdown_corner">
+        app:cardCornerRadius="@dimen/countdown_corner"
+        android:elevation="5dp">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:background="@drawable/countdown_gradient"
             >
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/countdown_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/countdown_text_color"
+                android:text="@string/countdown_title_string"
+                android:layout_marginTop="@dimen/countdown_title_margin"
+                android:textStyle="bold"
+                android:textSize="@dimen/countdown_title_text_size"/>
+
+            <include layout="@layout/countdown_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/countdown_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/classes_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/classes_title_text"
+        android:textSize="@dimen/classes_title_size"
+        android:textColor="@color/subtitle_gray"
+        android:layout_marginLeft="@dimen/subtitle_margin_h"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classes_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal" />
 
 </LinearLayout>
