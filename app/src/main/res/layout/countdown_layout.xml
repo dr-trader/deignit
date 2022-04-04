@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Days -->
+
+    <TextView
+        android:id="@+id/countdown_tv_days1"
+        style="@style/countdown_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/countdown_default_text"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/countdown_tv_days0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countdown_tv_days1"
+        android:text="@string/countdown_default_text"
+        android:layout_marginStart="@dimen/countdown_small_margin"
+        style="@style/countdown_tv" />
+
+    <!-- /Days -->
+
+    <TextView
+        android:id="@+id/countdown_delimiter1"
+        style="@style/countdown_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/countdown_tv_days0"
+        android:text="@string/countdown_delimiter"
+        android:layout_marginTop="@dimen/countdown_big_margin"
+        android:layout_marginHorizontal="@dimen/countdown_small_margin"
+        android:background="@color/empty_color" />
+
+    <!-- Hours -->
+
+    <TextView
+        android:id="@+id/countdown_tv_hours1"
+        style="@style/countdown_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countdown_delimiter1"
+        android:text="@string/countdown_default_text" />
+
+    <TextView
+        android:id="@+id/countdown_tv_hours0"
+        style="@style/countdown_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/countdown_tv_hours1"
+        android:text="@string/countdown_default_text"
+        android:layout_marginStart="@dimen/countdown_small_margin" />
+
+    <!-- /Hours -->
+
+    <TextView
+        android:id="@+id/countdown_delimiter0"
+        style="@style/countdown_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/countdown_tv_hours0"
+        android:text="@string/countdown_delimiter"
+        android:layout_marginHorizontal="@dimen/countdown_small_margin"
+        android:background="@color/empty_color" />
+
+    <!-- Minutes -->
+
+    <TextView
+        android:id="@+id/countdown_tv_minutes1"
+        style="@style/countdown_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/countdown_delimiter0"
+        android:text="@string/countdown_default_text" />
+
+    <TextView
+        android:id="@+id/countdown_tv_minutes0"
+        style="@style/countdown_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/countdown_tv_minutes1"
+        android:text="@string/countdown_default_text"
+        android:layout_marginStart="@dimen/countdown_small_margin" />
+
+    <!-- /Minutes -->
+
+    <!-- Subtitles -->
+
+    <TextView
+        android:id="@+id/countdown_days_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/countdown_tv_days0"
+        app:layout_constraintStart_toStartOf="@id/countdown_tv_days1"
+        app:layout_constraintEnd_toEndOf="@id/countdown_tv_days0"
+        android:text="@string/countdown_subtitle_days"
+        android:textColor="@color/countdown_text_color"
+        android:layout_marginTop="@dimen/countdown_big_margin"
+        android:textSize="@dimen/countdown_subtitle_text_size"/>
+
+    <TextView
+        android:id="@+id/countdown_hours_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/countdown_tv_hours0"
+        app:layout_constraintStart_toStartOf="@id/countdown_tv_hours1"
+        app:layout_constraintEnd_toEndOf="@id/countdown_tv_hours0"
+        android:text="@string/countdown_subtitle_hours"
+        android:textColor="@color/countdown_text_color"
+        android:layout_marginTop="@dimen/countdown_big_margin"
+        android:textSize="@dimen/countdown_subtitle_text_size"/>
+
+    <TextView
+        android:id="@+id/countdown_minutes_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/countdown_tv_minutes0"
+        app:layout_constraintStart_toStartOf="@id/countdown_tv_minutes1"
+        app:layout_constraintEnd_toEndOf="@id/countdown_tv_minutes0"
+        android:text="@string/countdown_subtitle_minuutes"
+        android:textColor="@color/countdown_text_color"
+        android:layout_marginTop="@dimen/countdown_big_margin"
+        android:textSize="@dimen/countdown_subtitle_text_size"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,8 +5,20 @@
 
     <!-- Countdown -->
     <dimen name="countdown_height">150dp</dimen>
-    <dimen name="countdown_margin_h">50dp</dimen>
+    <dimen name="countdown_margin_h">30dp</dimen>
     <dimen name="countdown_margin_v">30dp</dimen>
     <dimen name="countdown_corner">30dp</dimen>
+    <dimen name="countdown_title_margin">15dp</dimen>
+    <dimen name="countdown_title_text_size">17sp</dimen>
+    <dimen name="countdown_subtitle_text_size">12sp</dimen>
+    <dimen name="countdown_big_margin">15dp</dimen>
+    <dimen name="countdown_small_margin">5dp</dimen>
+    <dimen name="countdown_text_size">20sp</dimen>
+    <dimen name="countdown_tv_corner">10dp</dimen>
+    <dimen name="countdown_tv_padding">10dp</dimen>
+
+    <!-- Classes section -->
+    <dimen name="classes_title_size">20sp</dimen>
+    <dimen name="subtitle_margin_h">10dp</dimen>
 
 </resources>

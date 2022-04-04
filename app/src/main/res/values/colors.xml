@@ -5,9 +5,15 @@
     <color name="light_gray">#FF7d7e80</color> <!-- top bar text -->
     <color name="top_text_dark">#FFc1c1c1</color>
     <color name="top_text_light">#FFfafafb</color>
+    <color name="countdown_text_color">#FFeefdf5</color>
+    <color name="black_opacity65">#3B000000</color>
+    <color name="empty_color">#00FFFFFF</color>
 
     <color name="gradient_start">#FF35f286</color>
     <color name="gradient_end">#FF00bbba</color>
+
+    <color name="subtitle_gray">#FFb4bdbd</color>
+
 
     <color name="black">#FF000000</color>
 
