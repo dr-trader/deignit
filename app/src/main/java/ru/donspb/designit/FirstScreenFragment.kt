@@ -55,19 +55,19 @@ class FirstScreenFragment : Fragment(), IFirstScreen {
     }
 
     override fun setTime(timeInMs: Long) {
-        val includedBinding = CountdownLayoutBinding.bind(binding.root)
         val daysStringOne = (TimeUnit.DAYS.toDays(timeInMs) / 10).toString()
         val daysStringTwo = (TimeUnit.DAYS.toDays(timeInMs) % 10).toString()
         val hoursStringOne = ((TimeUnit.HOURS.toHours(timeInMs) % 24) / 10).toString()
-        val hoursStringTwo = ((TimeUnit.HOURS.toHours(timeInMs) % 24) / 10).toString()
+        val hoursStringTwo = ((TimeUnit.HOURS.toHours(timeInMs) % 24) % 10).toString()
         val minutesStringOne = ((TimeUnit.MINUTES.toHours(timeInMs) % 60) / 10).toString()
-        val minutesStringTwo = ((TimeUnit.MINUTES.toHours(timeInMs) % 60) / 10).toString()
-        includedBinding.countdownTvDays1.text = daysStringOne
-        includedBinding.countdownTvDays0.text = daysStringTwo
-        includedBinding.countdownTvHours1.text = hoursStringOne
-        includedBinding.countdownTvHours0.text = hoursStringTwo
-        includedBinding.countdownTvMinutes1.text = minutesStringOne
-        includedBinding.countdownTvMinutes0.text = minutesStringTwo
-
+        val minutesStringTwo = ((TimeUnit.MINUTES.toHours(timeInMs) % 60) % 10).toString()
+        with(binding.countdownIncluded) {
+            countdownTvDays1.text = daysStringOne
+            countdownTvDays0.text = daysStringTwo
+            countdownTvHours1.text = hoursStringOne
+            countdownTvHours0.text = hoursStringTwo
+            countdownTvMinutes1.text = minutesStringOne
+            countdownTvMinutes0.text = minutesStringTwo
+        }
     }
 }
