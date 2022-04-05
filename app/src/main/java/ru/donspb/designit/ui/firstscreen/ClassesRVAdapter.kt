@@ -2,6 +2,7 @@ package ru.donspb.designit.ui.firstscreen
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.donspb.designit.databinding.ClassesRecycleItemBinding
@@ -10,15 +11,21 @@ import ru.donspb.designit.model.ClassesModel
 class ClassesRVAdapter() :
     RecyclerView.Adapter<ClassesRVAdapter.ClassesRVHolder>() {
 
-    private var dataSet: List<ClassesModel> = listOf()
+    private var dataSet: MutableList<ClassesModel> = mutableListOf()
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(data: List<ClassesModel>?) {
         if (!data.isNullOrEmpty()) {
-            dataSet = data + listOf(ClassesModel("No more classes today",
-            "-:-", "-:-", false, true, "infinity"))
+            dataSet.clear()
+            dataSet.addAll(data)
             notifyDataSetChanged()
         }
+    }
+
+    fun addNoClasses() {
+        dataSet.add(ClassesModel("No more classes today",
+            "-:-", "-:-", false, true, "infinity"))
+        notifyItemInserted(itemCount - 1)
     }
 
     inner class ClassesRVHolder(private val binding: ClassesRecycleItemBinding) :
@@ -30,6 +37,8 @@ class ClassesRVAdapter() :
                 val context = binding.ivIconClasses.context
                 binding.ivIconClasses.setImageResource(context.resources.getIdentifier(
                     data.icon, "drawable", context.packageName))
+                if (data.hasSkype) binding.skypeButton.visibility = View.VISIBLE
+                else binding.skypeButton.visibility = View.GONE
             }
         }
 

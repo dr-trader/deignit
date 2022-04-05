@@ -66,6 +66,14 @@ class FirstScreenFragment : Fragment(), IFirstScreen {
 
     override fun setClassesData(data: List<ClassesModel>) = classesAdapter.setData(data)
 
-    override fun setClassesRVTo(position: Int) = binding.classesRecyclerview.scrollToPosition(position)
+    override fun setClassesRVTo(position: Int?) {
+        var scrollToPosition: Int
+        if (position == null) {
+            classesAdapter.addNoClasses()
+            scrollToPosition = classesAdapter.itemCount
+        } else
+            scrollToPosition = position
+        binding.classesRecyclerview.scrollToPosition(scrollToPosition - 1)
+    }
 
 }

@@ -2,10 +2,8 @@ package ru.donspb.designit.ui.firstscreen
 
 import android.os.CountDownTimer
 import ru.donspb.designit.repository.FakeRepository
-import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
-import java.util.*
 import kotlin.random.Random
 
 const val MINUTE: Long = 1000 * 60
@@ -37,8 +35,8 @@ class FirstScreenPresenter(val firstScreenView: IFirstScreen, val repository: Fa
         var classTimeEnd: LocalTime
         firstScreenView.setClassesData(dataSet)
         for (i in dataSet.indices) {
-            classTimeStart = LocalTime.parse(dataSet[i].timeStart, DateTimeFormatter.ofPattern("HH:mm"))
-            classTimeEnd = LocalTime.parse(dataSet[i].timeEnd, DateTimeFormatter.ofPattern("HH:mm"))
+            classTimeStart = LocalTime.parse(dataSet[i].timeStart, DateTimeFormatter.ofPattern("H:mm"))
+            classTimeEnd = LocalTime.parse(dataSet[i].timeEnd, DateTimeFormatter.ofPattern("H:mm"))
             if (currentTime.compareTo(classTimeStart) >= 0) {
                 if (currentTime.compareTo(classTimeEnd) < 0) {
                     position = i
@@ -49,7 +47,7 @@ class FirstScreenPresenter(val firstScreenView: IFirstScreen, val repository: Fa
                 break
             }
         }
-        if (position == null) firstScreenView.setClassesRVTo(dataSet.size)
+        if (position == null) firstScreenView.setClassesRVTo(null)
         else firstScreenView.setClassesRVTo(position)
     }
 }
