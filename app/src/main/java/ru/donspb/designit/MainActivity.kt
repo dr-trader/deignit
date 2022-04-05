@@ -2,6 +2,7 @@ package ru.donspb.designit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ru.donspb.designit.ui.firstscreen.FirstScreenFragment
 
 class MainActivity : AppCompatActivity() {
 

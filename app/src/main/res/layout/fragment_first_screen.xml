@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".FirstScreenFragment"
+    tools:context=".ui.firstscreen.FirstScreenFragment"
     android:background="@color/almost_black"
     android:orientation="vertical">
 
@@ -14,8 +14,7 @@
         android:layout_height="@dimen/countdown_height"
         android:layout_marginHorizontal="@dimen/countdown_margin_h"
         android:layout_marginVertical="@dimen/countdown_margin_v"
-        app:cardCornerRadius="@dimen/countdown_corner"
-        android:elevation="5dp">
+        app:cardCornerRadius="@dimen/countdown_corner" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

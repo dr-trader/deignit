@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/classes_rv_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/countdown_margin_h"
+    app:cardCornerRadius="@dimen/countdown_corner">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dark_gradient">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_cardview"
+            android:layout_width="@dimen/rv_image_size"
+            android:layout_height="@dimen/rv_image_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cardCornerRadius="@dimen/rv_image_corner"
+            android:layout_marginLeft="@dimen/rv_image_margin" >
+            <ImageView
+                android:id="@+id/iv_icon_classes"
+                android:layout_width="@dimen/rv_image_size"
+                android:layout_height="@dimen/rv_image_size"
+                android:background="@color/rv_image_background"
+                android:padding="@dimen/rv_image_padding"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/rv_image_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_cardview"
+            android:layout_marginLeft="@dimen/textcard_margin">
+
+            <TextView
+                android:id="@+id/class_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/classes_title_size"
+                android:textColor="@color/subtitle_gray"
+                tools:text="Class"
+                />
+
+            <ImageView
+                android:id="@+id/clock_image"
+                android:layout_width="@dimen/textcard_bottom_text_size"
+                android:layout_height="@dimen/textcard_bottom_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/class_time"
+                app:layout_constraintTop_toTopOf="@id/class_time"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_clock"
+                />
+
+            <TextView
+                android:id="@+id/class_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/clock_image"
+                android:textSize="@dimen/textcard_bottom_text_size"
+                android:textColor="@color/time_icon_color"
+                tools:text="0:00 - 0:00"
+                android:layout_marginLeft="@dimen/textcard_bottom_text_margin"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/blue_button_shape"
+            android:text="@string/button_skype_text"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="@dimen/textcard_button_text_size"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

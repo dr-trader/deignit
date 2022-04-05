@@ -8,9 +8,16 @@
     <color name="countdown_text_color">#FFeefdf5</color>
     <color name="black_opacity65">#3B000000</color>
     <color name="empty_color">#00FFFFFF</color>
+    <color name="rv_image_background">#FF2d2e33</color>
 
     <color name="gradient_start">#FF35f286</color>
     <color name="gradient_end">#FF00bbba</color>
+    <color name="gradient_start_dark">#FF24252a</color>
+    <color name="gradient_end_dark">#FF232329</color>
+    <color name="time_icon_color">#FF4E4F54</color>
+    <color name="blue_button">#FF4bcfff</color>
+
+
 
     <color name="subtitle_gray">#FFb4bdbd</color>
 

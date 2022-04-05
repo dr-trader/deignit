@@ -9,5 +9,7 @@
         <item name="android:layout_marginTop">@dimen/countdown_big_margin</item>
         <item name="android:padding">@dimen/countdown_tv_padding</item>
         <item name="android:background">@drawable/countdown_textview</item>
+        <item name="android:textStyle">bold</item>
     </style>
+
 </resources>

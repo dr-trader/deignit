@@ -12,8 +12,7 @@
         style="@style/countdown_tv"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/countdown_default_text"
-        android:textStyle="bold"/>
+        android:text="@string/countdown_default_text" />
 
     <TextView
         android:id="@+id/countdown_tv_days0"

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="zero">0dp</dimen>
+
     <dimen name="avatar_size">30dp</dimen>
     <dimen name="avatar_padding">5dp</dimen>
 
@@ -20,5 +22,15 @@
     <!-- Classes section -->
     <dimen name="classes_title_size">20sp</dimen>
     <dimen name="subtitle_margin_h">10dp</dimen>
+    <dimen name="classes_rv_height">120dp</dimen>
+    <dimen name="rv_image_size">60dp</dimen>
+    <dimen name="rv_image_padding">7dp</dimen>
+    <dimen name="rv_image_margin">30dp</dimen>
+    <dimen name="rv_image_corner">25dp</dimen>
+    <dimen name="textcard_margin">20dp</dimen>
+    <dimen name="textcard_bottom_text_size">12sp</dimen>
+    <dimen name="textcard_bottom_text_margin">2sp</dimen>
+    <dimen name="textcard_button_text_size">15sp</dimen>
+
 
 </resources>
