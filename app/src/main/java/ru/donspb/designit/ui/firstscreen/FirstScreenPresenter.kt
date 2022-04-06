@@ -1,7 +1,7 @@
 package ru.donspb.designit.ui.firstscreen
 
 import android.os.CountDownTimer
-import ru.donspb.designit.repository.FakeRepository
+import ru.donspb.designit.repository.IRepository
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import kotlin.random.Random
@@ -10,7 +10,7 @@ const val MINUTE: Long = 1000 * 60
 const val INTERVAL_FROM: Long = MINUTE * 60 * 24  // One day
 const val INTERVAL_TO: Long = MINUTE * 60 * 72    // Three days
 
-class FirstScreenPresenter(val firstScreenView: IFirstScreen, val repository: FakeRepository) {
+class FirstScreenPresenter(val firstScreenView: IFirstScreen, private val repository: IRepository) {
 
 
     fun countdown() {
@@ -35,19 +35,15 @@ class FirstScreenPresenter(val firstScreenView: IFirstScreen, val repository: Fa
         var classTimeEnd: LocalTime
         firstScreenView.setClassesData(dataSet)
         for (i in dataSet.indices) {
-            classTimeStart = LocalTime.parse(dataSet[i].timeStart, DateTimeFormatter.ofPattern("H:mm"))
-            classTimeEnd = LocalTime.parse(dataSet[i].timeEnd, DateTimeFormatter.ofPattern("H:mm"))
-            if (currentTime.compareTo(classTimeStart) >= 0) {
-                if (currentTime.compareTo(classTimeEnd) < 0) {
-                    position = i
-                    break
-                }
-            } else {
+//            LocalTime.parse(dataSet[i].timeStart, DateTimeFormatter.ofPattern("H:mm"))
+//                .also { classTimeStart = it }
+            LocalTime.parse(dataSet[i].timeEnd, DateTimeFormatter.ofPattern("H:mm"))
+                .also { classTimeEnd = it }
+            if (currentTime < classTimeEnd) {
                 position = i
                 break
             }
         }
-        if (position == null) firstScreenView.setClassesRVTo(null)
-        else firstScreenView.setClassesRVTo(position)
+        firstScreenView.setClassesRVTo(position)
     }
 }

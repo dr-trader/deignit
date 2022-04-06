@@ -2,13 +2,13 @@ package ru.donspb.designit.repository
 
 import ru.donspb.designit.model.ClassesModel
 
-class FakeRepository {
+class FakeRepository : IRepository {
 
-    fun getClasses(): List<ClassesModel> =
+    override fun getClasses(): List<ClassesModel> =
         listOf(
-            ClassesModel("History", "08:00", "8:45", true,
+            ClassesModel("History", "8:00", "8:45", true,
                 true, "history"),
-            ClassesModel("Literature", "09:00", "9:45", false,
+            ClassesModel("Literature", "9:00", "9:45", false,
                 true, "literature"),
             ClassesModel("Physical Education", "10:00", "11:35", false,
                 false, "sport"),

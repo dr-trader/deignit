@@ -70,10 +70,11 @@ class FirstScreenFragment : Fragment(), IFirstScreen {
         var scrollToPosition: Int
         if (position == null) {
             classesAdapter.addNoClasses()
-            scrollToPosition = classesAdapter.itemCount
+            scrollToPosition = classesAdapter.itemCount - 1
         } else
             scrollToPosition = position
-        binding.classesRecyclerview.scrollToPosition(scrollToPosition - 1)
+        binding.classesNumber.text = "$scrollToPosition classes today"
+        binding.classesRecyclerview.scrollToPosition(scrollToPosition)
     }
 
 }

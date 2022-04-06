@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_cardview"
+    android:layout_width="@dimen/rv_image_size"
+    android:layout_height="@dimen/rv_image_size"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:cardCornerRadius="@dimen/rv_image_corner"
+    android:layout_marginLeft="@dimen/rv_image_margin"
+    app:cardBackgroundColor="@color/empty_color"
+    tools:showIn="@layout/classes_recycle_item">
+
+    <ImageView
+        android:id="@+id/iv_icon_classes"
+        android:layout_width="@dimen/rv_image_size"
+        android:layout_height="@dimen/rv_image_size"
+        android:background="@color/rv_image_background"
+        android:padding="@dimen/rv_image_padding" />
+</androidx.cardview.widget.CardView>

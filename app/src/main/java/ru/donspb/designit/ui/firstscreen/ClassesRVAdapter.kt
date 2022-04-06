@@ -34,8 +34,8 @@ class ClassesRVAdapter() :
             fun setClassesInfo(data: ClassesModel) {
                 binding.className.text = data.classname
                 binding.classTime.text = "${data.timeStart} - ${data.timeEnd}"
-                val context = binding.ivIconClasses.context
-                binding.ivIconClasses.setImageResource(context.resources.getIdentifier(
+                val context = binding.classesRvClassItem.ivIconClasses.context
+                binding.classesRvClassItem.ivIconClasses.setImageResource(context.resources.getIdentifier(
                     data.icon, "drawable", context.packageName))
                 if (data.hasSkype) binding.skypeButton.visibility = View.VISIBLE
                 else binding.skypeButton.visibility = View.GONE

@@ -49,11 +49,44 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/classes_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/classes_title_text"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/classes_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/classes_title_text"
+            android:textSize="@dimen/classes_title_size"
+            android:textColor="@color/subtitle_gray"
+            android:layout_marginLeft="@dimen/subtitle_margin_h"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/classes_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/classes_number_size"
+            android:textColor="@color/dark_subtitle"
+            android:layout_marginRight="@dimen/subtitle_margin_h"
+            android:textStyle="bold"
+            android:textAlignment="viewEnd"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classes_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/homeworks_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homeworks_title_text"
         android:textSize="@dimen/classes_title_size"
         android:textColor="@color/subtitle_gray"
         android:layout_marginLeft="@dimen/subtitle_margin_h"
@@ -61,7 +94,7 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/classes_recyclerview"
+        android:id="@+id/homeworks_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

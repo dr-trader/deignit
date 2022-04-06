@@ -28,4 +28,7 @@
     <string name="classes_title_text">Classes</string>
     <string name="button_skype_text">S\nk\ny\np\ne</string>
 
+    <!-- Homework Section -->
+    <string name="homeworks_title_text">Homeworks</string>
+
 </resources>
