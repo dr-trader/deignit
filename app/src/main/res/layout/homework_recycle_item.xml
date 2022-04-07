@@ -27,7 +27,7 @@
             tools:text="Class" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/image_cardview"
+            android:id="@+id/image_cardview_hw"
             android:layout_width="@dimen/rv_image_size"
             android:layout_height="@dimen/rv_image_size"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,12 +38,46 @@
             tools:showIn="@layout/classes_recycle_item">
 
             <ImageView
-                android:id="@+id/iv_icon_classes"
+                android:id="@+id/iv_icon_hw"
                 android:layout_width="@dimen/rv_image_size"
                 android:layout_height="@dimen/rv_image_size"
                 android:background="@color/rv_image_background"
                 android:padding="@dimen/rv_image_padding" />
         </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/clock_image_hw"
+            android:layout_width="@dimen/textcard_bottom_text_size"
+            android:layout_height="@dimen/textcard_bottom_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/image_cardview_hw"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_clock"
+            />
+
+        <TextView
+            android:id="@+id/homework_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/image_cardview_hw"
+            app:layout_constraintStart_toEndOf="@id/clock_image_hw"
+            android:textSize="@dimen/textcard_bottom_text_size"
+            android:textColor="@color/time_icon_color"
+            android:text="@string/homeworks_time_default"
+            android:layout_marginLeft="@dimen/textcard_bottom_text_margin"
+            />
+
+        <TextView
+            android:id="@+id/homework_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/homework_time_left"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/header_description_margin"
+            tools:text="Homework sample description"
+            android:textColor="@color/little_text"
+            android:textSize="@dimen/hw_description_text_size"
+            />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

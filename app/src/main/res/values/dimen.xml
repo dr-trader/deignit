@@ -36,5 +36,7 @@
     <!-- Homeworks section -->
     <dimen name="homework_card_size">300dp</dimen>
     <dimen name="homework_card_padding">20dp</dimen>
+    <dimen name="header_description_margin">10dp</dimen>
+    <dimen name="hw_description_text_size">10sp</dimen>
 
 </resources>

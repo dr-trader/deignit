@@ -30,5 +30,6 @@
 
     <!-- Homework Section -->
     <string name="homeworks_title_text">Homeworks</string>
+    <string name="homeworks_time_default">days left</string>
 
 </resources>
