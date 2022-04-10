@@ -1,18 +1,22 @@
 package ru.donspb.designit.ui.firstscreen
 
+import android.os.Build
 import android.os.Bundle
 import android.view.*
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import ru.donspb.designit.R
 import ru.donspb.designit.databinding.FragmentFirstScreenBinding
 import ru.donspb.designit.model.ClassesModel
+import ru.donspb.designit.model.HomeworksModel
 import ru.donspb.designit.repository.FakeRepository
 
 class FirstScreenFragment : Fragment(), IFirstScreen {
 
     private lateinit var binding: FragmentFirstScreenBinding
     private val presenter = FirstScreenPresenter(this, FakeRepository())
-    private val classesAdapter = ClassesRVAdapter()
+    private val classesAdapter = GenericRecyclerViewAdapter<ClassesModel>()
+    private val homeworksAdapter = GenericRecyclerViewAdapter<HomeworksModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,12 +43,15 @@ class FirstScreenFragment : Fragment(), IFirstScreen {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.classesRecyclerview.adapter = classesAdapter
+        binding.homeworksRecyclerview.adapter = homeworksAdapter
         presenter.countdown()
         presenter.getClasses()
+        presenter.getHomeworks()
     }
 
     override fun setTime(timeInMs: Long) {
@@ -66,6 +73,8 @@ class FirstScreenFragment : Fragment(), IFirstScreen {
 
     override fun setClassesData(data: List<ClassesModel>) = classesAdapter.setData(data)
 
+    override fun setHomeworksData(data: List<HomeworksModel>) = homeworksAdapter.setData(data)
+
     override fun setClassesRVTo(position: Int?) {
         var scrollToPosition: Int
         if (position == null) {
@@ -76,5 +85,6 @@ class FirstScreenFragment : Fragment(), IFirstScreen {
         binding.classesNumber.text = "$scrollToPosition classes today"
         binding.classesRecyclerview.scrollToPosition(scrollToPosition)
     }
+
 
 }

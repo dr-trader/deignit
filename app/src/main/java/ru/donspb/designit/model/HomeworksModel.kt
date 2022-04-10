@@ -3,4 +3,5 @@ package ru.donspb.designit.model
 data class HomeworksModel(
     val classname: String,
     val timeLeft: String,
-    val description: String)
+    val description: String,
+    val icon: String)

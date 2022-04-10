@@ -24,9 +24,11 @@ class FakeRepository : IRepository {
     override fun getHomeworks(): List<HomeworksModel> =
         listOf(
             HomeworksModel("Literature", "2", "Read scenes 1.1 - 1.12 of" +
-                    " the Master and Margarita "),
-            HomeworksModel("Physics", "5", "Learn Newton's laws of motion"),
-            HomeworksModel("Programming", "7", "Make interface for Kotlin application"),
+                    " the Master and Margarita ", "literature"),
+            HomeworksModel("Physics", "5", "Learn Newton's laws of motion",
+                "chemistry"),
+            HomeworksModel("Programming", "7", "Make interface for Kotlin application",
+                "programming"),
         )
 
 }

@@ -1,103 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.firstscreen.FirstScreenFragment"
-    android:background="@color/almost_black"
-    android:orientation="vertical">
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/countdown_card"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/countdown_height"
-        android:layout_marginHorizontal="@dimen/countdown_margin_h"
-        android:layout_marginVertical="@dimen/countdown_margin_v"
-        app:cardCornerRadius="@dimen/countdown_corner" >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@drawable/countdown_gradient"
-            >
-
-            <TextView
-                android:id="@+id/countdown_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textColor="@color/countdown_text_color"
-                android:text="@string/countdown_title_string"
-                android:layout_marginTop="@dimen/countdown_title_margin"
-                android:textStyle="bold"
-                android:textSize="@dimen/countdown_title_text_size"/>
-
-            <include layout="@layout/countdown_layout"
-                android:id="@+id/countdown_included"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/countdown_title"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
+    android:background="@color/almost_black">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/countdown_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/countdown_height"
+            android:layout_marginHorizontal="@dimen/countdown_margin_h"
+            android:layout_marginVertical="@dimen/countdown_margin_v"
+            app:cardCornerRadius="@dimen/countdown_corner" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/countdown_gradient"
+                >
+
+                <TextView
+                    android:id="@+id/countdown_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/countdown_text_color"
+                    android:text="@string/countdown_title_string"
+                    android:layout_marginTop="@dimen/countdown_title_margin"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/countdown_title_text_size"/>
+
+                <include layout="@layout/countdown_layout"
+                    android:id="@+id/countdown_included"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/countdown_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/classes_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/classes_title_text"
+                android:textSize="@dimen/classes_title_size"
+                android:textColor="@color/subtitle_gray"
+                android:layout_marginLeft="@dimen/subtitle_margin_h"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/classes_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/classes_number_size"
+                android:textColor="@color/dark_subtitle"
+                android:layout_marginRight="@dimen/subtitle_margin_h"
+                android:textStyle="bold"
+                android:textAlignment="viewEnd"
+                />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classes_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal" />
+
         <TextView
-            android:id="@+id/classes_title"
+            android:id="@+id/homeworks_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/classes_title_text"
+            android:text="@string/homeworks_title_text"
             android:textSize="@dimen/classes_title_size"
             android:textColor="@color/subtitle_gray"
             android:layout_marginLeft="@dimen/subtitle_margin_h"
             android:textStyle="bold"
             />
-        <TextView
-            android:id="@+id/classes_number"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeworks_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/classes_number_size"
-            android:textColor="@color/dark_subtitle"
-            android:layout_marginRight="@dimen/subtitle_margin_h"
-            android:textStyle="bold"
-            android:textAlignment="viewEnd"
-            />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal" />
+
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/classes_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="horizontal" />
-
-    <TextView
-        android:id="@+id/homeworks_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/homeworks_title_text"
-        android:textSize="@dimen/classes_title_size"
-        android:textColor="@color/subtitle_gray"
-        android:layout_marginLeft="@dimen/subtitle_margin_h"
-        android:textStyle="bold"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/homeworks_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="horizontal" />
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -17,13 +17,9 @@
     <color name="time_icon_color">#FF4E4F54</color>
     <color name="blue_button">#FF4bcfff</color>
     <color name="dark_subtitle">#FF495455</color>
-
     <color name="little_text">#FFbababf</color>
-
-
-
     <color name="subtitle_gray">#FFb4bdbd</color>
-
+    <color name="dark_red">#FF5d2a3b</color>
 
     <color name="black">#FF000000</color>
 

@@ -1,6 +1,8 @@
 package ru.donspb.designit.ui.firstscreen
 
+import android.os.Build
 import android.os.CountDownTimer
+import androidx.annotation.RequiresApi
 import ru.donspb.designit.repository.IRepository
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -27,16 +29,14 @@ class FirstScreenPresenter(val firstScreenView: IFirstScreen, private val reposi
         }.start()
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun getClasses() {
         var position: Int? = null
         val dataSet = repository.getClasses()
         val currentTime = LocalTime.now()
-        var classTimeStart: LocalTime
         var classTimeEnd: LocalTime
         firstScreenView.setClassesData(dataSet)
         for (i in dataSet.indices) {
-//            LocalTime.parse(dataSet[i].timeStart, DateTimeFormatter.ofPattern("H:mm"))
-//                .also { classTimeStart = it }
             LocalTime.parse(dataSet[i].timeEnd, DateTimeFormatter.ofPattern("H:mm"))
                 .also { classTimeEnd = it }
             if (currentTime < classTimeEnd) {
@@ -45,5 +45,10 @@ class FirstScreenPresenter(val firstScreenView: IFirstScreen, private val reposi
             }
         }
         firstScreenView.setClassesRVTo(position)
+    }
+
+    fun getHomeworks() {
+        val dataSet = repository.getHomeworks()
+        firstScreenView.setHomeworksData(dataSet)
     }
 }
