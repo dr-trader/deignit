@@ -8,17 +8,17 @@ class FakeRepository : IRepository {
     override fun getClasses(): List<ClassesModel> =
         listOf(
             ClassesModel("History", "8:00", "8:45", true,
-                true, "history"),
+                true, "history", "Mrs.Thomas"),
             ClassesModel("Literature", "9:00", "9:45", false,
-                true, "literature"),
+                true, "literature", "Mr.Barros"),
             ClassesModel("Physical Education", "10:00", "11:35", false,
-                false, "sport"),
+                false, "sport", "Mr.Smith", "Preparing for olimpic games"),
             ClassesModel("Math", "12:00", "12:45", true,
-                true, "maths"),
+                true, "maths", "Mr.Fibonacci"),
             ClassesModel("Chemistry", "13:00", "13:45", false,
-                true, "chemistry"),
+                true, "chemistry", "Mrs.Mendeleeva"),
             ClassesModel("Programming", "14:00", "14:45", false,
-                false, "programming")
+                false, "programming", "Mr.C", "Preparing for interview for developer position")
         )
 
     override fun getHomeworks(): List<HomeworksModel> =

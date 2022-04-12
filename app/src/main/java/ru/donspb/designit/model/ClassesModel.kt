@@ -6,5 +6,7 @@ data class ClassesModel(
     val timeEnd: String,
     val hasSkype: Boolean,
     val isMandatory: Boolean,
-    val icon: String
+    val icon: String,
+    val teacher: String,
+    val about: String? = null
 )
