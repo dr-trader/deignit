@@ -63,6 +63,7 @@
             android:textColor="@color/time_icon_color"
             android:text="@string/homeworks_time_default"
             android:layout_marginLeft="@dimen/textcard_bottom_text_margin"
+            android:textStyle="bold"
             />
 
         <TextView
