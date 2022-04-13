@@ -1,4 +1,4 @@
-package ru.donspb.designit.ui.firstscreen
+package ru.donspb.designit.ui.recyclerview
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

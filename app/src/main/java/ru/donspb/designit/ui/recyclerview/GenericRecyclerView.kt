@@ -1,4 +1,4 @@
-package ru.donspb.designit.ui.firstscreen
+package ru.donspb.designit.ui.recyclerview
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -42,7 +42,8 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
             TYPE_CLASSES -> {
                 val view = ClassesRecycleItemBinding.inflate(LayoutInflater.from(parent.context),
                     parent, false)
-                ClassesRVHolder(view) as BaseViewHolder<T> }
+                ClassesRVHolder(view) as BaseViewHolder<T>
+            }
             TYPE_HOMEWORKS -> {
                 val view = HomeworkRecycleItemBinding.inflate(LayoutInflater.from(parent.context),
                     parent, false)

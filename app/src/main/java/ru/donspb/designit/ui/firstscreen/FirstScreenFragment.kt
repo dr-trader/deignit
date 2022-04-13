@@ -10,6 +10,7 @@ import ru.donspb.designit.databinding.FragmentFirstScreenBinding
 import ru.donspb.designit.model.ClassesModel
 import ru.donspb.designit.model.HomeworksModel
 import ru.donspb.designit.repository.FakeRepository
+import ru.donspb.designit.ui.recyclerview.GenericRecyclerViewAdapter
 
 class FirstScreenFragment : Fragment(), IFirstScreen {
 

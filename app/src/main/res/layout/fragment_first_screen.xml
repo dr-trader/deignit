@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.firstscreen.FirstScreenFragment"
-    android:background="@color/almost_black">
+    android:background="@color/almost_black"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
