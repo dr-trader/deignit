@@ -40,4 +40,13 @@
     <dimen name="header_description_margin">10dp</dimen>
     <dimen name="hw_description_text_size">10sp</dimen>
 
+    <!-- Second Screen -->
+    <dimen name="grid_first_col_width">50dp</dimen>
+    <dimen name="grid_first_col_height">50dp</dimen>
+    <dimen name="grid_half_height">24dp</dimen>
+    <dimen name="line_width">2dp</dimen>
+    <dimen name="grid_icon_selected_size">40dp</dimen>
+    <dimen name="grid_icon_unselected_size">10dp</dimen>
+    <dimen name="timeline_time_size">22sp</dimen>
+
 </resources>

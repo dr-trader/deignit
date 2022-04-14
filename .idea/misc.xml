@@ -10,6 +10,7 @@
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/drawable/countdown_gradient.xml" value="0.1175" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/drawable/countdown_textview.xml" value="0.118" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/drawable/dark_gradient.xml" value="0.1175" />
+        <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/drawable/line.xml" value="0.1255" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/drawable/pathline.xml" value="0.123" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/layout/activity_main.xml" value="0.1707193515704154" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/layout/class_icon_layout.xml" value="0.1707193515704154" />
@@ -19,7 +20,10 @@
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/layout/fragment_second_screen.xml" value="0.1707193515704154" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/layout/homework_recycle_item.xml" value="0.1707193515704154" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/layout/tabs_layout.xml" value="0.15760869565217392" />
+        <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/layout/timeline_recycle_item.xml" value="0.3253968253968254" />
         <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+        <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/menu/top_menu.xml" value="0.33425925925925926" />
+        <entry key="..\:/_ASProjects/DesignIt/app/src/main/res/menu/top_menu_second.xml" value="0.33425925925925926" />
       </map>
     </option>
   </component>

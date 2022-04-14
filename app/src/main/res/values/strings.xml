@@ -12,6 +12,8 @@
     <string name="mi_filter_name">Filter</string>
     <string name="mi_profile_name">Profile</string>
     <string name="id_for_toptext">tv_text_top</string>
+    <string name="mi_table_view">Table</string>
+    <string name="mi_grid_view">Grid</string>
 
     <!-- Default Text -->
     <string name="hi_name_string">Hi, User!</string>
@@ -31,6 +33,11 @@
     <!-- Homework Section -->
     <string name="homeworks_title_text">Homeworks</string>
     <string name="homeworks_time_default">days left</string>
+
+    <!-- Second Screen -->
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
