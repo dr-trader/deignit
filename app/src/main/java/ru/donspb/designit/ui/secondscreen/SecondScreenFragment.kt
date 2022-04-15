@@ -55,12 +55,6 @@ class SecondScreenFragment : Fragment(), ISecondScreen {
         classesTimeLineAdapter.setData(dataSet)
 
     override fun setClassesRVTo(position: Int?) {
-        var scrollToPosition: Int
-        if (position == null) {
-            classesTimeLineAdapter.addNoClasses()
-            scrollToPosition = classesTimeLineAdapter.itemCount - 1
-        } else
-            scrollToPosition = position
-        binding.secondScreenRecyclerview.scrollToPosition(scrollToPosition)
+        if (position != null) binding.secondScreenRecyclerview.scrollToPosition(position)
     }
 }

@@ -112,6 +112,8 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
 
         override fun bind(item: ClassesModelExtended) {
 
+            binding.tvTimelineHours.text = item.timeStart + " - " + item.timeEnd
+
 //            binding.className.text = item.classname
 //            binding.homeworkDescription.text = item.description
 //            val timeLeft = item.timeLeft + binding.homeworkTimeLeft.text
