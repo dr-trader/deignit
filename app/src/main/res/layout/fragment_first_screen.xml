@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.firstscreen.FirstScreenFragment"
     android:background="@color/almost_black"
@@ -66,7 +66,7 @@
                 android:text="@string/classes_title_text"
                 android:textSize="@dimen/classes_title_size"
                 android:textColor="@color/subtitle_gray"
-                android:layout_marginLeft="@dimen/subtitle_margin_h"
+                android:layout_marginStart="@dimen/subtitle_margin_h"
                 android:textStyle="bold"
                 />
             <TextView
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/classes_number_size"
                 android:textColor="@color/dark_subtitle"
-                android:layout_marginRight="@dimen/subtitle_margin_h"
+                android:layout_marginEnd="@dimen/subtitle_margin_h"
                 android:textStyle="bold"
                 android:textAlignment="viewEnd"
                 />
@@ -95,7 +95,7 @@
             android:text="@string/homeworks_title_text"
             android:textSize="@dimen/classes_title_size"
             android:textColor="@color/subtitle_gray"
-            android:layout_marginLeft="@dimen/subtitle_margin_h"
+            android:layout_marginStart="@dimen/subtitle_margin_h"
             android:textStyle="bold"
             />
 

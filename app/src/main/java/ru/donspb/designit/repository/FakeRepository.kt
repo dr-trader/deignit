@@ -1,6 +1,7 @@
 package ru.donspb.designit.repository
 
 import ru.donspb.designit.model.ClassesModel
+import ru.donspb.designit.model.ClassesModelExtended
 import ru.donspb.designit.model.HomeworksModel
 
 class FakeRepository : IRepository {
@@ -19,6 +20,22 @@ class FakeRepository : IRepository {
                 true, "chemistry"),
             ClassesModel("Programming", "14:00", "14:45", false,
                 false, "programming")
+        )
+
+    override fun getExtendedClasses(): List<ClassesModelExtended> =
+        listOf(
+            ClassesModelExtended("History", "8:00", "8:45", true,
+                true, "history", "Mrs.Thomas"),
+            ClassesModelExtended("Literature", "9:00", "9:45", false,
+                true, "literature", "Mr.Barros"),
+            ClassesModelExtended("Physical Education", "10:00", "11:35", false,
+                false, "sport", "Mr.Smith", "Preparing for olimpic games"),
+            ClassesModelExtended("Math", "12:00", "12:45", true,
+                true, "maths", "Mr.Fibonacci"),
+            ClassesModelExtended("Chemistry", "13:00", "13:45", false,
+                true, "chemistry", "Mrs.Mendeleeva"),
+            ClassesModelExtended("Programming", "14:00", "14:45", false,
+                false, "programming", "Mr.C", "Preparing for interview for developer position")
         )
 
     override fun getHomeworks(): List<HomeworksModel> =

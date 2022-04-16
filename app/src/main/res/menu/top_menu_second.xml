@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mi_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/mi_search_name"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/mi_table"
+        android:icon="@drawable/ic_table"
+        android:title="@string/mi_table_view"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/mi_grid"
+        android:title="@string/mi_grid_view"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_grid"/>
+</menu>

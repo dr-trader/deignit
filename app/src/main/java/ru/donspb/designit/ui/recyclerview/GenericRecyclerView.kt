@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.donspb.designit.R
 import ru.donspb.designit.databinding.ClassesRecycleItemBinding
 import ru.donspb.designit.databinding.HomeworkRecycleItemBinding
+import ru.donspb.designit.databinding.TimelineRecycleItemBinding
 import ru.donspb.designit.model.ClassesModel
+import ru.donspb.designit.model.ClassesModelExtended
 import ru.donspb.designit.model.HomeworksModel
 
 class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T>>() {
@@ -17,6 +19,7 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
     companion object {
         const val TYPE_CLASSES = 0
         const val TYPE_HOMEWORKS = 1
+        const val TYPE_CLASSES_E = 3
         const val CRITICAL_DAYS_LEFT = 2
     }
 
@@ -49,6 +52,12 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
                     parent, false)
                 HomeworksRVHolder(view) as BaseViewHolder<T>
             }
+
+            TYPE_CLASSES_E -> {
+                val view = TimelineRecycleItemBinding.inflate(LayoutInflater.from(parent.context),
+                    parent, false)
+                TimelineRVHolder(view) as BaseViewHolder<T>
+            }
             else -> throw IllegalArgumentException("Invalid viewType in RecycleView adapter")
         }
     }
@@ -61,6 +70,7 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
         return when (dataSet[position]) {
             is ClassesModel -> TYPE_CLASSES
             is HomeworksModel -> TYPE_HOMEWORKS
+            is ClassesModelExtended -> TYPE_CLASSES_E
             else -> throw IllegalArgumentException("Invalid data type")
         }
     }
@@ -94,6 +104,26 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
             )
             binding.ivIconHw.setImageResource(context.resources.getIdentifier(
                 item.icon, "drawable", context.packageName))
+        }
+    }
+
+    inner class TimelineRVHolder(private val binding: TimelineRecycleItemBinding) :
+        BaseViewHolder<ClassesModelExtended>(binding.root) {
+
+        override fun bind(item: ClassesModelExtended) {
+
+            binding.tvTimelineHours.text = item.timeStart + " - " + item.timeEnd
+
+//            binding.className.text = item.classname
+//            binding.homeworkDescription.text = item.description
+//            val timeLeft = item.timeLeft + binding.homeworkTimeLeft.text
+//            binding.homeworkTimeLeft.text = timeLeft
+//            val context = binding.homeworkTimeLeft.context
+//            if (item.timeLeft.toInt() <= CRITICAL_DAYS_LEFT) binding.homeworkTimeLeft.setTextColor(
+//                ContextCompat.getColor(context, R.color.dark_red)
+//            )
+//            binding.ivIconHw.setImageResource(context.resources.getIdentifier(
+//                item.icon, "drawable", context.packageName))
         }
     }
 }
