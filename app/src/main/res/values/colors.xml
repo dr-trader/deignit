@@ -7,7 +7,7 @@
     <color name="top_text_light">#FFfafafb</color>
     <color name="countdown_text_color">#FFeefdf5</color>
     <color name="black_opacity65">#3B000000</color>
-    <color name="empty_color">#00FFFFFF</color>
+    <color name="empty_color">#28FFFFFF</color>
     <color name="rv_image_background">#FF2d2e33</color>
 
     <color name="gradient_start">#FF35f286</color>

@@ -39,6 +39,7 @@
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">FAKE SCREEN FRAGMENT</string>
+    <string name="class_icon_descr_text">Class icon</string>
 
 </resources>

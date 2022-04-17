@@ -7,16 +7,17 @@
     android:layout_height="@dimen/rv_image_size"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
     app:cardCornerRadius="@dimen/rv_image_corner"
-    android:layout_marginLeft="@dimen/rv_image_margin"
+    android:layout_marginStart="@dimen/rv_image_margin"
     app:cardBackgroundColor="@color/empty_color"
-    tools:showIn="@layout/classes_recycle_item">
+    tools:showIn="@layout/classes_recycle_item"
+    android:layout_marginTop="@dimen/textcard_margin">
 
     <ImageView
         android:id="@+id/iv_icon_classes"
         android:layout_width="@dimen/rv_image_size"
         android:layout_height="@dimen/rv_image_size"
         android:background="@color/rv_image_background"
-        android:padding="@dimen/rv_image_padding" />
+        android:padding="@dimen/rv_image_padding"
+        android:contentDescription="@string/class_icon_descr_text" />
 </androidx.cardview.widget.CardView>

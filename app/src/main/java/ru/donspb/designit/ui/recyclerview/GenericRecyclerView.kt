@@ -111,19 +111,31 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
         BaseViewHolder<ClassesModelExtended>(binding.root) {
 
         override fun bind(item: ClassesModelExtended) {
-
+            val context = binding.gridTimelineIcon.context
             binding.tvTimelineHours.text = item.timeStart + " - " + item.timeEnd
+            if (adapterPosition == 0) binding.preLine.visibility = View.GONE
+            if (adapterPosition == (itemCount - 1)) {
+                binding.postLine.visibility = View.GONE
+                binding.postPostLine.visibility = View.GONE
+            }
 
-//            binding.className.text = item.classname
-//            binding.homeworkDescription.text = item.description
-//            val timeLeft = item.timeLeft + binding.homeworkTimeLeft.text
-//            binding.homeworkTimeLeft.text = timeLeft
-//            val context = binding.homeworkTimeLeft.context
-//            if (item.timeLeft.toInt() <= CRITICAL_DAYS_LEFT) binding.homeworkTimeLeft.setTextColor(
-//                ContextCompat.getColor(context, R.color.dark_red)
-//            )
-//            binding.ivIconHw.setImageResource(context.resources.getIdentifier(
-//                item.icon, "drawable", context.packageName))
+            binding.tlClassName.text = item.classname
+            binding.tlClassTeacher.text = "Teacher: " + item.teacher
+            binding.tlRvClassItem.ivIconClasses.setImageResource(context.resources.getIdentifier(
+                item.icon, "drawable", context.packageName))
+            if (item.hasSkype) binding.tlSkypeButton.visibility = View.VISIBLE
+            else binding.tlSkypeButton.visibility = View.GONE
+
+            if (!item.isMandatory) {
+                binding.tlCardBackground.setBackgroundResource(context.resources.getIdentifier(
+                    "countdown_gradient", "drawable", context.packageName))
+                val textColor = context.getColor(R.color.white)
+                binding.tlClassName.setTextColor(textColor)
+                binding.tlClassTeacher.setTextColor(textColor)
+                binding.tlClassDescription.setTextColor(textColor)
+                binding.tlClassDescription.text = item.about
+                binding.tlClassDescription.visibility = View.VISIBLE
+            }
         }
     }
 }

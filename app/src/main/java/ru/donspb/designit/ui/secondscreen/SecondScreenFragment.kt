@@ -1,15 +1,14 @@
 package ru.donspb.designit.ui.secondscreen
 
+import android.os.Build
 import android.os.Bundle
 import android.view.*
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import ru.donspb.designit.R
-import ru.donspb.designit.databinding.FragmentFirstScreenBinding
 import ru.donspb.designit.databinding.FragmentSecondScreenBinding
-import ru.donspb.designit.model.ClassesModel
 import ru.donspb.designit.model.ClassesModelExtended
 import ru.donspb.designit.repository.FakeRepository
-import ru.donspb.designit.ui.firstscreen.FirstScreenPresenter
 import ru.donspb.designit.ui.recyclerview.GenericRecyclerViewAdapter
 
 class SecondScreenFragment : Fragment(), ISecondScreen {
@@ -39,14 +38,14 @@ class SecondScreenFragment : Fragment(), ISecondScreen {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentSecondScreenBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.secondScreenRecyclerview.adapter = classesTimeLineAdapter
         presenter.getTimelineData()
     }

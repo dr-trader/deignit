@@ -48,5 +48,7 @@
     <dimen name="grid_icon_selected_size">40dp</dimen>
     <dimen name="grid_icon_unselected_size">10dp</dimen>
     <dimen name="timeline_time_size">22sp</dimen>
+    <dimen name="description_text_margin_bot">20dp</dimen>
+    <dimen name="description_text_margin_top">7dp</dimen>
 
 </resources>
