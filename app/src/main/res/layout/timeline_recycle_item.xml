@@ -49,7 +49,19 @@
                 android:id="@+id/grid_timeline_icon_sel"
                 android:layout_width="@dimen/grid_icon_selected_size"
                 android:layout_height="@dimen/grid_icon_selected_size"
-                android:src="@drawable/circle_on_shape"
+                android:src="@drawable/circle_off_shape"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/grid_timeline_icon_sel_center"
+                android:layout_width="@dimen/grid_icon_unselected_size"
+                android:layout_height="@dimen/grid_icon_unselected_size"
+                android:src="@drawable/circle_white_center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

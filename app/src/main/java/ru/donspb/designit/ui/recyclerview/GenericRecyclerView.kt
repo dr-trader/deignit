@@ -1,6 +1,7 @@
 package ru.donspb.designit.ui.recyclerview
 
 import android.annotation.SuppressLint
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -114,6 +115,11 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
             val context = binding.gridTimelineIcon.context
             binding.tvTimelineHours.text = item.timeStart + " - " + item.timeEnd
             if (adapterPosition == 0) binding.preLine.visibility = View.GONE
+            if (adapterPosition == 1) {
+                binding.gridTimelineIcon.visibility = View.GONE
+                binding.gridTimelineIconSel.visibility = View.VISIBLE
+                binding.gridTimelineIconSelCenter.visibility = View.VISIBLE
+            }
             if (adapterPosition == (itemCount - 1)) {
                 binding.postLine.visibility = View.GONE
                 binding.postPostLine.visibility = View.GONE
