@@ -1,7 +1,6 @@
 package ru.donspb.designit.ui.recyclerview
 
 import android.annotation.SuppressLint
-import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +13,8 @@ import ru.donspb.designit.databinding.TimelineRecycleItemBinding
 import ru.donspb.designit.model.ClassesModel
 import ru.donspb.designit.model.ClassesModelExtended
 import ru.donspb.designit.model.HomeworksModel
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 
 class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T>>() {
 
@@ -25,6 +26,7 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
     }
 
     private var dataSet: MutableList<T> = mutableListOf()
+    private var currentFound = false
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(data: List<T>?) {
@@ -37,7 +39,7 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
 
     fun addNoClasses() {
         dataSet.add(ClassesModel("No classes left",
-            "-:-", "-:-", false, true, "infinity") as T)
+            "-:-", "-:-", hasSkype = false, isMandatory = true, "infinity") as T)
         notifyItemInserted(itemCount - 1)
     }
 
@@ -81,6 +83,7 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
     inner class ClassesRVHolder(private val binding: ClassesRecycleItemBinding) :
         BaseViewHolder<ClassesModel>(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         override fun bind(item: ClassesModel) {
             binding.className.text = item.classname
             binding.classTime.text = "${item.timeStart} - ${item.timeEnd}"
@@ -111,15 +114,25 @@ class GenericRecyclerViewAdapter<T: Any> : RecyclerView.Adapter<BaseViewHolder<T
     inner class TimelineRVHolder(private val binding: TimelineRecycleItemBinding) :
         BaseViewHolder<ClassesModelExtended>(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         override fun bind(item: ClassesModelExtended) {
             val context = binding.gridTimelineIcon.context
             binding.tvTimelineHours.text = item.timeStart + " - " + item.timeEnd
             if (adapterPosition == 0) binding.preLine.visibility = View.GONE
-            if (adapterPosition == 1) {
+            val currentTime = LocalTime.now()
+            if (currentTime < LocalTime.parse(item.timeEnd, DateTimeFormatter.ofPattern("H:mm")) &&
+                    !currentFound) {
+                currentFound = true
                 binding.gridTimelineIcon.visibility = View.GONE
                 binding.gridTimelineIconSel.visibility = View.VISIBLE
                 binding.gridTimelineIconSelCenter.visibility = View.VISIBLE
             }
+            else {
+                binding.gridTimelineIcon.visibility = View.VISIBLE
+                binding.gridTimelineIconSel.visibility = View.GONE
+                binding.gridTimelineIconSelCenter.visibility = View.GONE
+            }
+
             if (adapterPosition == (itemCount - 1)) {
                 binding.postLine.visibility = View.GONE
                 binding.postPostLine.visibility = View.GONE

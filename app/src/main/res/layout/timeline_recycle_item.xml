@@ -138,6 +138,7 @@
                         android:textSize="@dimen/classes_title_size"
                         android:textColor="@color/subtitle_gray"
                         tools:text="Class"
+                        android:maxLines="2"
                         />
 
                     <TextView

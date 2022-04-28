@@ -4,6 +4,7 @@
 
     <dimen name="avatar_size">30dp</dimen>
     <dimen name="avatar_padding">5dp</dimen>
+    <dimen name="tablayout_height">100dp</dimen>
 
     <!-- Countdown -->
     <dimen name="countdown_height">150dp</dimen>
