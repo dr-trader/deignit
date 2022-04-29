@@ -10,6 +10,7 @@
     android:background="@color/almost_black">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tabs_card"
         style="@style/CustomCardViewStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tablayout_height"
@@ -33,6 +34,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tabs_layout"/>
+        app:layout_constraintBottom_toTopOf="@id/tabs_card"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
