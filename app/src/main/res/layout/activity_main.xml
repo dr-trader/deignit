@@ -23,7 +23,11 @@
             android:id="@+id/tabs_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="@color/tablayout_back"/>
+            android:backgroundTint="@color/tablayout_back"
+            app:tabIconTint="@color/bot_button_color"
+            app:tabTextColor="@color/bot_button_color"
+            app:tabSelectedTextColor="@color/bot_button_color_selected"
+            app:tabInlineLabel="true" />
 
     </com.google.android.material.card.MaterialCardView>
 

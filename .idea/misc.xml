@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/drawable-anydpi/ic_calendar.xml" value="0.1" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/drawable/blue_button_shape.xml" value="0.1925" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/drawable/circle_off_shape.xml" value="0.1155" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/drawable/circle_on_shape.xml" value="0.1155" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/drawable/circle_white_center.xml" value="0.1155" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/drawable/line.xml" value="0.1155" />
+        <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/drawable/tab_button_sel.xml" value="0.281" />
+        <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/layout/class_icon_layout.xml" value="0.2609375" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/layout/classes_recycle_item.xml" value="0.12689969604863222" />
         <entry key="..\:/Casper/ASProjects/deignit/app/src/main/res/layout/fragment_fake_screen.xml" value="0.2609375" />
