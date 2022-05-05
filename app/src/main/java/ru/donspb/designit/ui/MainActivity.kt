@@ -2,8 +2,11 @@ package ru.donspb.designit.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
+import android.view.WindowInsetsController
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import ru.donspb.designit.R
@@ -70,5 +73,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.attach()
+    }
+
+    private fun hideSystemBars() {
+        val windowInsetsController = ViewCompat.getWindowInsetsController(window.decorView) ?: return
+        windowInsetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
     }
 }
